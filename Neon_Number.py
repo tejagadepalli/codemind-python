@@ -1,4 +1,4 @@
-num=int(input())
+num=int (input())
 sqr=num*num
 sumofdigit=0
 while sqr>0:
@@ -7,4 +7,4 @@ while sqr>0:
 if(num==sumofdigit):
     print ("Neon Number")
 else:
-    print("Not Neon Number")
+    print ("Not Neon Number")
