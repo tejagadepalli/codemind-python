@@ -1,8 +1,10 @@
-n=int(input())
-a=n
-for i in range(2,int(n**0.5)+1):
-    if n%i==0:
-        print('not a prime')
-        break
-else:
-    print('prime')
+num = int(input())
+if num > 1:
+    for i in range(2,num): 
+        if (num % i) == 0:
+            print("not a prime")
+            break 
+    else:
+        print("prime") 
+else: 
+    print("not a prime")
