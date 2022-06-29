@@ -1,29 +1,30 @@
-x=int(input())
-for i in range(1,x+1):
-    n=int(input())
-    d=n
-    for j in range(n,1,-1):
-        c=0
-        for k in range(1,j+1):
-            if j%k==0:
-                c=c+1
-        if c==2:
-            min=j
+def is_prime(j):
+    i=2
+    v=0
+    while i!=j:
+        if j%i==0:
+            v=1
+        i+=1
+    if v==0:
+        return j
+
+
+x = int(input())
+for i in range(x):
+    y = int(input())
+    b=y
+    for j in range(y,2-1,-1):
+        if is_prime(j):
+            n=j
             break
-    while True:
-        c=0
-        for k in range(1,n+1):
-            if n%k==0:
-                c=c+1
-        if c==2:
-            max=n
+    while b!=0:
+        if is_prime(b):
+            m=b
             break
-        n=n+1
-    r1=d-min
-    r2=max-d
-    if r1<r2:
-        print(min)
-    elif r1==r2:
-        print(min)
+        b+=1
+    if (y-n)<(m-y):
+        print(n)
+    elif (y-n)==(m-y):
+        print(n)
     else:
-        print(max)
+        print(m)
